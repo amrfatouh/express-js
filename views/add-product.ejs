@@ -1,0 +1,12 @@
+<html>
+  <%- include('includes/start.ejs') %>
+  <body>
+    <%- include('includes/navbar.ejs') %>
+    <main>
+      <form action="/admin/add-product" method="POST">
+        <input autofocus type="text" name="title" />
+        <input type="submit" value="add" />
+      </form>
+    </main>
+  </body>
+</html>

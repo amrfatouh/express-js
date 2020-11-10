@@ -1,0 +1,16 @@
+<html>
+  <%- include('includes/start.ejs') %>
+  <body>
+    <%- include('includes/navbar.ejs') %>
+    <main>
+      <% if (products.length) { %> <% for(let product of products) { %>
+      <div>
+        <div><%= product.title %></div>
+        <div>5.99$</div>
+      </div>
+      <% } %> <% } else { %>
+      <h2>No products found</h2>
+      <% } %>
+    </main>
+  </body>
+</html>
