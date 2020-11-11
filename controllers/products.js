@@ -11,5 +11,7 @@ exports.postAddProduct = (req, res, next) => {
 };
 
 exports.getProducts = (req, res, next) => {
-  res.render("shop.ejs", { pageTitle: "Shop", products: Product.fetchAll() });
+  Product.fetchAll((products) => {
+    res.render("shop.ejs", { pageTitle: "Shop", products: products });
+  });
 };
